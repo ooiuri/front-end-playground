@@ -1,0 +1,156 @@
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+}
+.bg-top{
+    position: absolute;
+    left: 0;
+    top: -50%;
+    z-index: -1;
+}
+.bg-bottom{
+    position: absolute;
+    right: 0;
+    bottom:-50%;
+    z-index: -1;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -2;
+    /* background: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg');
+    background-position: -35vw -55vh, 55vw 55vh;
+    background-repeat: no-repeat, no-repeat;
+    background-origin: content-box; */
+    background-color: hsl(185, 75%, 39%);
+}
+
+.avatar{
+    margin-top: -50px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: aliceblue 5px solid;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-end;
+    align-items: center;
+    
+    width: 375px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 74px -17px rgba(0,0,0,0.30);
+    
+    background: url('./images/bg-pattern-card.svg');
+    
+    z-index: 1;
+}
+
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    height: 65%;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    border-top: hsl(0, 0%, 59%, .3) 1px solid;
+    
+    background-color: aliceblue;
+}
+
+.profile-info{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+    
+}
+.profile-numbers-wrapper{
+    display: flex;
+    width: 100%;
+    margin: 0;
+
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border-top: hsl(0, 0%, 59%, .3) 1px solid;
+}
+
+.profile-numbers{
+    display: flex;
+    width: 80%;
+
+    padding: 10px;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+}
+
+.profile-info h3 {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+
+.profile-info .age {
+    font-weight: 400;
+}
+
+.profile-numbers p{
+    color: hsl(0, 0%, 59%);
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-align: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.secondary{
+    color:hsl(0, 0%, 59%)
+}
+
+.attribution{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    
+}
+.attribution h3 {
+    padding: 10px;
+    font-weight: 400;
+    color: white;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: white;
+    transition: color .5s;
+}
+
+.attribution a:hover{
+    
+    color: black;
+}
