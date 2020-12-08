@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+
+	<title>Frontend Mentor | FAQ Accordion Card</title>
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		.attribution { font-size: 11px; text-align: center; }
+		.attribution a { color: hsl(228, 45%, 44%); }
+	</style>
+
+	<script>
+		function handleClick(element) {
+			if(element.classList.length) {
+				element.classList.remove("active");
+			}
+			else{
+				let othersActives = document.getElementsByClassName("active")
+				if(othersActives.length){
+					othersActives[0].classList.remove("active");
+				}
+				element.classList.add("active");
+			}
+			
+			if(element.nextElementSibling.classList == "no-show"){
+				let x = document.getElementsByClassName("show");
+				if(x.length){
+					x[0].classList.add("no-show");
+					x[0].classList.remove("show");
+				}
+				element.nextElementSibling.classList.add("show");
+				element.nextElementSibling.classList.remove("no-show");
+			}
+			else{
+				element.nextElementSibling.classList.remove("show");
+				element.nextElementSibling.classList.add("no-show");
+			}
+		}
+	</script>
+	</head>
+	<body>
+	<div class="container">
+		<div class="faq-card">
+			<img src="./images/illustration-woman-online-mobile.svg" class="woman-mobile mobile-only"/>
+			<img src="images/illustration-box-desktop.svg" class="box mobile-hide"/>
+			<div class="bg-img">
+				<!-- <img src="./images/bg-pattern-desktop.svg" alt="" > -->
+			</div>
+			<div class="img-container">
+				<img src="./images/illustration-woman-online-desktop.svg" class="mobile-hide">
+			</div>
+			<ul class="faq-list">
+				<h1>FAQ</h1>
+				<li class="faq-item">
+					<h2 onclick="handleClick(this)">
+						How many team members can I invite?	
+					</h2>
+					<div class="no-show">
+						<p>
+							You can invite up to 2 additional users on the Free plan. There is no limit on
+							team members for the Premium plan.
+						</p>
+					</div>
+				</li>
+				<li class="faq-item">
+					<h2 onclick="handleClick(this)">
+						What is the maximum file upload size?
+					</h2>
+					<div class="no-show">
+						<p>
+							No more than 2GB. All files in your account must fit your allotted storage space.
+						</p>
+					</div>
+				</li>
+				<li class="faq-item">
+					<h2 onclick="handleClick(this)">
+						How do I reset my password?
+					</h2>
+					<div class="no-show">
+						<p>
+							Click “Forgot password” from the login page or “Change password” from your profile page.
+	A reset link will be emailed to you.
+						</p>
+					</div>
+				</li>
+				<li class="faq-item">
+					<h2 onclick="handleClick(this)">
+						Can I cancel my subscription?
+					</h2>
+					<div class="no-show">
+						<p>
+							Yes! Send us a message and we’ll process your request no questions asked.
+						</p>
+					</div>
+				</li>
+				<li class="faq-item">
+					<h2 onclick="handleClick(this)">
+						Do you provide additional support?
+					</h2>
+					<div class="no-show">
+						<p>
+							Chat and email support is available 24/7. Phone lines are open during normal business hours.
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<div class="attribution">
+		<h3>
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+			Coded by <a href="https://github.com/ooiuri/">Iuri Reis</a>.
+		</h3>
+	</div>
+	</body>
+</html>
