@@ -28,10 +28,10 @@ body{
 }
 @keyframes bounce {
     0% {
-        top:250px;
+        top:230px;
     }
     100%{
-        top:220px;
+        top:200px;
     }
 }
 .container{
