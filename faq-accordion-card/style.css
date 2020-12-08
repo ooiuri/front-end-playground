@@ -149,6 +149,7 @@ body{
 }
 
 .woman-mobile{
+    
     position: relative;
     margin-top: -100px;
 }
@@ -173,9 +174,14 @@ body{
         padding: 20px !important;
         width: 80%;
         margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
 
     }
-    .faq-list h1{
+    .faq-title{
         text-align: center;
     }
     .faq-list h2{
@@ -186,7 +192,9 @@ body{
     }
     .mobile-only{
         display: flex !important;
+        overflow: auto;
     }
+    
 }
 
 
